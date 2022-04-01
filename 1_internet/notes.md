@@ -35,4 +35,4 @@
   **data payload**
   - the data we want to transport over the network
   - the KEY to how the encapsulation is implemented
-    - [PDU](1_internet/PDU.png)
+![PDU](./PDU.png)
