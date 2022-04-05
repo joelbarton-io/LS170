@@ -40,7 +40,8 @@
 
   - **Ginni summary**
     - Transmission Control Protocol is a protocol that operates within the Transport Later. It provides multiplexing, or end-to-end communication between multiple processes over the single channel provided by IP, via port numbers. It also has features that ensure reliability. It uses a three-way handshake to establish dedicated communication connections and this ensures data integrity, de-duplication, in-order delivery, and retransmission of lost data. The complexity of this process can cause significant latency overhead. To mitigate this and to be as efficient as possible, TCP provides flow control and congestion avoidance.
-    - core traits of the tcp PDU (segment)
+
+  - traits of the tcp PDU (_segment_)
 
     1. (De/)multiplexing
     2. error detection (check sum)
