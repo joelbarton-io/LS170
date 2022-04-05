@@ -1,9 +1,9 @@
 ## transport layer security protocol (tls)
 
-**SSN was forerunner to TLS**
+### **SSN was forerunner to TLS**
 - assumes TCP is being used at the transport layer*
 
-**provides three important security services**
+### provides three important security services
 
 - *Encryption:* encoding messages
   - encryption process initiated via *the TLS handshake*
