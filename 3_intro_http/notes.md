@@ -42,14 +42,14 @@
 - scheme names are lowercase, protocol names are UPPERCASE
 
 **urls and filepaths**
-- most web content is generate dynamically, on the server side, then sent as the response to the client
+- most web content is generated dynamically, on the server side, then sent as the response to the client
 - how the path portion of a url is used varies depending on the application/framework
 
 ## **request response cycle**
 - client is usually a web browser
 - server is whatever software is running on the machine (server)
 
-1. http request initiated (typed in a url into browswer)
+1. http request initiated (typed in a url into browser)
 2. request created -> method (GET/POST), path (to resource), parameters (due=today)
 3. server receives http request from client
 4. common (verify session, load tasks from database, render html)

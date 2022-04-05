@@ -1,13 +1,16 @@
 # **Security**
 
-## Have an understanding of various security risks that can affect HTTP, and be able to outline measures that can be used to mitigate against these risks
-- **main risks:**
+## security risks that can affect HTTP; measures used to mitigate these risks
+
+### main risks
   1. Session Hijacking
     - occurs when a hacker impersonates a user by using the user's session id.
   2. Cross-site scripting
     - when some script (HTML/JS) is injected into a web application's server which is then interpreted by the client's browser and run
   3. packet sniffing
-- **risk mitigation strategies**
+
+### risk mitigation strategies
+
   1. resetting sessions; session timeouts, HTTPS (secure HTTP)
   2. user input sanitation (eliminate script tages; disallow JS/HTML inputs); escape all user input so it isn't interpreted as code
 
@@ -21,20 +24,24 @@
   - initiated via the  *TLS handshake*
     - concerned with 1) TLS version, 2) algorithms included in cipher, 3) exchange of symmetric keys enabled for use with message encryption
     - VERY COMPLEX; adds latency (up to double round-trip) impacting performance
+
 ### 2. Authentication
   - ID verification of some participant in a message exchange
 
   - a partial function of the certificate is to provide means of id for the party providing said certificate
 
+  - certificates are exchanged during the *TLS handshake* process
+
   - PROCESS: server sends cert (including public key) -> server creates signature with server's private key -> signature is transmitted with original data -> client decrypts signature using server's public key -> compares decrypted data to original data, if they match, then the encrypted version could only have been created by an entity in possession of private key.
 
-  - the authenticity of a certificate is verified by a Certificate Authority
+  - the authenticity of a certificate is verified by a Certificate Authority (CA)
     - there are different issuers of certificates; google has its own...
     - the cert hierarchy is known as the 'chain of trust'
     - certs for lower-level authorities are signed by the CA one level above them
     - root certs are essentially the end point in the chain; self signers
 
   - whole system still relies on trust and humans; thus fallible
+
 ### 3. Integrity
   - process to detect message tampering/interference
 
