@@ -56,7 +56,7 @@
 5. server serves response
 6. response (status: 200) (headers) (body)
 7. client looks at content type header, acts accordingly
-8. such as displaying webpage to user
+8. displays webpage to user
 
 
 

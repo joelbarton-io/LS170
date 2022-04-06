@@ -14,8 +14,8 @@ end: April 11th
 
 
 ## active recall/definitions practice
-- Quizlet notecard review
-- keep working on my own notecards
+- keep doing Quizlet notecard reviewing
+- keep working on personal notecards
 
 
 ## articles

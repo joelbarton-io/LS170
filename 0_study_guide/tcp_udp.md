@@ -86,11 +86,11 @@
 
 ## udp
 
-  - doesn't take action to nullify the inherent unreliability of nether layers
+  - unlike tcp, udp doesn't take action to nullify the inherent unreliability of nether layers and overal network infrastructure
 
-  - a _connectionless_ (read: NO [three-way handshake](#three-way-handshake)) protocol; very simple pdu ![udp header](./transport-udp-datagram-header.png)
+  - a _connectionless_ (read: intrinsically unreliable) protocol; simple pdu ![udp header](./transport-udp-datagram-header.png)
 
-  - udp's pdu is the *datagram*
+  - *datagram*
 
     - header has 4 fields
 
