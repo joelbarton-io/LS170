@@ -2,7 +2,11 @@
 
 ## transport layer
 
-  - concerned with providing end-to-end communication between *specific processes* (read: applications), this end-to-end communication is achieved thru [_multiplexing_](#multiplexing)
+  - concerned with providing end-to-end communication between *specific processes* (read: applications)
+
+  - the SINGLE host-to-host connection provided at the internet/network layer (eg. IP) is used by multiple processes
+
+  - this end-to-end communication is achieved thru [_multiplexing_](#multiplexing)
 
   - postal service analogy:
 
@@ -49,10 +53,10 @@
     4. flow control (WINDOW SIZE field)
     5. congestion avoidance
 
-### tcp provides...
+### PROS
 
   - _reliability_ (message acknowledgement & retransmission)
-  - in-order delivery of segments (via sequence numbers)
+  - _in-order delivery_ of segments (via sequence numbers in segment header)
 
   - _flow control_
     - prevents sender from overwhelming receiver
@@ -63,7 +67,7 @@
     - if there's a lot of lost data occurring; tcp will reduce the size of the transmission window, thus reducing congestion and (hopefully) reducing the need to retransmit segments
     - tries to minimize duplicate transmission to improve efficiency
 
-### at the cost of:
+### CONS
 
   - performance! _tcp sacrifices speed for reliability_
 
@@ -76,21 +80,27 @@
   - **purpose**: establishes dedicated and reliable connections between processes on different devices over the _inherently unreliable network infrastructure_
 
   - **STEPS**
-    - **SYN**chronize: _is the receiver ready to receive?_ -> **SYN**
+    - **SYN**chronize: _sender asks receiver "ready to receive?"_ -> **SYN**
     - **ACK**nowledge: _receiver says, "message received"_ -> **SYN ACK**
     - **ACK**nowledge: _sender says, "message received"_   -> **ACK**
 
 ## udp
 
-  - simple, connectionless protocol
-  - PDU of UDP is a *datagram*
+  - doesn't take action to nullify the inherent unreliability of nether layers
 
-  - header of datagram only has 4 fields (source port, destination port, length (in bits), checksum)
+  - a _connectionless_ (read: NO [three-way handshake](#three-way-handshake)) protocol; very simple pdu ![udp header](./transport-udp-datagram-header.png)
 
-  - doesn't take any actions to attempt to resolve inherent unreliability of nether layers (Internet, data link, physical)
+  - udp's pdu is the *datagram*
+
+    - header has 4 fields
+
+    - as the pdu has source/destination ports; thus provides (de)multiplexing
+
+    - data payload consists of an encapsulated HTTP request or response (from application layer)
 
 ### PROS
-  - simplicity `=` speed & flexibility
+  - the simplicity of UDP equates to high speeds & flexibility
+  - is often used as a starting point from which to selectively add features
   - "one-way" traffic (sender -> receiver); no connection state info, ack, etc...
   - low latency, excellent for an app like Zoom
 
@@ -100,17 +110,11 @@
   - no built-in congestion avoidance or flow-control mechanisms
   - no connection state tracking, as it is a connectionless protocol
 
+### similarities to tcp
 
-## similarities
-
-  - both protocols provide for multiplexing
+  - both provide for multiplexing
 
   - since they exist at the same level (transport layer), both utilize the layer beneath (internet/network) and thus the header fields for source IP and destination IP address must be present in both respective protocol's PDU
 
-## differences
-  - tcp is connection-oriented; udp is connectionless
+  - data payload of both is an encapsulated HTTP request or response
 
-
-## udp over tcp
-
-  - low latency (applications that prioritize speed)
