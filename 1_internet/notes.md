@@ -13,6 +13,7 @@
     - all concerned with *flow and order* of communication
     - TCP + UDP -> address same basic aspect of comm; in diff. ways
     - TCP + HTTP -> address diff aspect of communication
+
 ## **a layered system**
 - protocol groups function within varied layers of communication systems
   - logical message structure, logical message transfer, physical message creation/interpretation, physical message transfer

@@ -5,6 +5,8 @@
 
 - "Hyper-**_text_** transfer protocol": a HTTP req/res exchange cycle involves the sending and receiving of text between a client and a server
 
+- client is always the one who initiates a request
+
 - the protocol that governs data exchange on the Web
 
 ### use cases for GET and POST
@@ -48,7 +50,7 @@
 
 ## describe the HTTP request/response cycle
 
-thanks vahid
+thanks vahid 
 
 ## what are status codes?  different types?
 
@@ -65,11 +67,9 @@ thanks vahid
 | 5xx | server error | internal server error; a generic server-side error |
 
 
-## what is meant by 'state' in the context of the web?  how does HTTP simulate state?
+## what is meant by 'state' in the context of the web?
 
 - a "stateful" application is one which retains client data from the activities of a past session
-
-- _"HTTP is stateless, but not sessionless"_
 
 - _"HTTP is a stateless protocol; each cycle is independent of the one before and the one that came after"_
   - stateless protocols like `http` are _resilient_, _fast_, and _flexible_
@@ -80,6 +80,10 @@ thanks vahid
   - when the user adds an item to their cart they issue a new HTTP request
 
   - for this fictional application to do something useful, it needs to somehow retain it's current state post-new http request
+
+### how does HTTP simulate state?
+
+- _"HTTP is stateless, but not sessionless"_ - (MDN)
 
   - while `http` is very much a _stateless protocol_; developers can _simulate_ statefulness, meaning that the application _feels like and appears_ to have a persistent connection to the resource, when in reality, it is simply the **_appearance of persistent state_**
 
