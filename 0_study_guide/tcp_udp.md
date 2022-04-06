@@ -76,7 +76,7 @@
   must wait their turn (queuing delay) thus adding more latency to the transfer;  known as _head-of-line blocking_
 
 ### three-way handshake
-
+![tcp handshake](./tcp_handshake.png)
   - **purpose**: establishes dedicated and reliable connections between processes on different devices over the _inherently unreliable network infrastructure_
 
   - **STEPS**
