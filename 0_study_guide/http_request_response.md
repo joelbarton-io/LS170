@@ -3,11 +3,11 @@
 
 ## what is HTTP?
 
-- "Hyper-**_text_** transfer protocol": a HTTP req/res exchange cycle involves the sending and receiving of text between a client and a server
+- "Hyper-**_text_** transfer protocol": a HTTP request/response exchange cycle involves the sending and receiving of text between a client and a server
 
-- client is always the one who initiates a request
+- protocol which governs the exchange of data on the Web (a service accessible via the internet)
 
-- the protocol that governs data exchange on the Web
+- the client is always the party which initiates a request (restaurant server/customer analogy)
 
 ### use cases for GET and POST
 
@@ -25,32 +25,32 @@
 
 ### http requests
 
-  - consist of
+  - made by: **client**
+
+  - consist of...
     - 1. _method_: verbs (GET/POST) || nouns (OPTIONS/HEAD); specify the desired operation
     - 2. _path_: (`file/path/to/resource.html`)
     - 3. _version_: of protocol (`HTTP/1.1`)
     - 4. _headers_: optional; convey info re: request context so _server_ can tailor response
-    - 5. _body_: raw data (html webpage, `js`, raw files like photos, videos, etc...)
+    - 5. _body_: raw data (optional) (html webpage, `js`, raw files like photos, videos, etc...)
 
 ### http responses
 
-  - response consists of a _response line_, _headers,_ and a _body_
+  - made by: **server**
 
-  - _response line_ contains the _status code_, _status text_, and _version_
-
-  - HTTP response headers contain additional information about the response
-
-    1. information about the type of encoding used to encrypt the data
-
-    2. name of the server
-    3. a new resource location if applicable (Location header), which helps the client redirect to the requested resource if it has been moved (`302`)'
-    4. content-type (i.e. text/html); helps client render data in a user-friendly way
-
-  - The HTTP response body consists of the raw data for the requested resource (HTML of the webpage, images, videos, or audio files)
+  - consist of...
+    - 1. _version_: of protocol (`HTTP/1.1`)
+    - 2. _status code and message_: indicates if the request was successful or not, and why?
+    - 3. _headers_: optional (?); contain additional information about the response
+        - information about the type of encoding used to encrypt the data
+        - name of the server
+        - a new resource location if applicable (Location header), which helps the client redirect to the requested resource if it has been moved (`302`)'
+        - content-type (i.e. text/html); helps client render data in a user-friendly way
+    - 4. _body_: optional; raw data (html webpage, `js`, raw files like photos, videos, etc...)
 
 ## describe the HTTP request/response cycle
 
-thanks vahid 
+thanks vahid
 
 ## what are status codes?  different types?
 

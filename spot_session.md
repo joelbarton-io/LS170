@@ -1,6 +1,10 @@
 # The Internet
 #### Have a broad understanding of what the internet is and how it works
-  - **A network is multiple devices connected to chase and exchange data**
+- **network**: a group of devices connected in such a way as they can exchange data and communicate with one another
+  - LAN (or WLAN; wireless) group of devices connected via network bridging device like a *switch*
+- a LAN needs a way to communicate to other networks; enter the *router*
+  - facilitates inter-network communication
+
   - **internet is a network of networks**
   - 2 pieces:
     - physical infrastructure
@@ -32,12 +36,13 @@ https://howdns.works/
         - buffer time to be "processed"
     - round trip travel/time
     - used to assess performance of the physical network
+
   - bandwidth
     - a **measure of the amount of data** can sent at a single moment
-    - not a measure of how long it takes
-    - measure of capacity
+    - measure of capacity; **not** a measure of how long it takes
     - bandwidth varies based on where data is in the process of transfer
     - bottlenecks
+
   - taken together, they are a measure of performance of a physical (?) network
 #### - Have a basic understanding of how lower level protocols operate
 
@@ -83,7 +88,7 @@ https://howdns.works/
     - physical
       - bits and bytes 1, 0
       - electrical, light (fiber optic), radio waves (cell and wifi)
-      - stream (no pdu?)
+      - stream of 1s and 0s (pdu?)
   - OSI
 
 #### - Know what an IP address is and what a port number is

@@ -10,6 +10,7 @@
       - propogation delay (A -> B; ratio between distance travelled and rate (speed))
       - transmission delay (intersection analogy)
       - processing delay (interchange/merging?)
+      - queuing delay (buffer)
   - *bandwidth*
     - is the amount of data that can be sent at once; NOT the same from end-to-end
     - 'bottleneck': point where there's a change from high to low bandwidth
@@ -19,6 +20,7 @@
 ## *Know what an IP address is and what a port number is*
   - a logical address assigned to a device when that device joins a network
   - an IP address is NOT tied to any one device;
+
 ## *Have an understanding of how DNS works*
 ## *Understand the client-server model of web interactions, and the role of HTTP as a protocol within that model*
 
