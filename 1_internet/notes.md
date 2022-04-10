@@ -1,5 +1,6 @@
 ## **network**
 - a group of devices connected in such a way as they can exchange data and communicate with one another
+
 - LAN (or WLAN; wireless) group of devices connected via network bridging device like a *switch*
 - a LAN needs a way to communicate to other networks; enter the *router*
   - facilitates inter-network communication

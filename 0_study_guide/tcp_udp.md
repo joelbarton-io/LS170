@@ -48,11 +48,13 @@
   - traits of the tcp PDU (_segment_)
 
     1. (De/)multiplexing
-    2. error detection (check sum)
-    3. in-order delivery, data-loss/data-duplication handling
+    2. error detection; data integrity (check sum field)
+    3. in-order delivery, data-loss/data-duplication handling (sequence numbers & ack #)
     4. flow control (WINDOW SIZE field)
-    5. congestion avoidance
+    5. congestion avoidance (WINDOW SIZE field)
 
+
+    - most of these headers are there for reliability purposes
 ### PROS
 
   - _reliability_ (message acknowledgement & retransmission)

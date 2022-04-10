@@ -5,6 +5,7 @@
 
 - "Hyper-**_text_** transfer protocol": a HTTP request/response exchange cycle involves the sending and receiving of text between a client and a server
 
+- all an http request/response is a string of text formatted in a specific way 
 - protocol which governs the exchange of data on the Web (a service accessible via the internet)
 
 - the client is always the party which initiates a request (restaurant server/customer analogy)
@@ -25,7 +26,7 @@
 
 ### http requests
 
-  - made by: **client**
+  - made by: **client** (usually)
 
   - consist of...
     - 1. _method_: verbs (GET/POST) || nouns (OPTIONS/HEAD); specify the desired operation
@@ -36,7 +37,7 @@
 
 ### http responses
 
-  - made by: **server**
+  - made by: **server** (usually)
 
   - consist of...
     - 1. _version_: of protocol (`HTTP/1.1`)
@@ -50,7 +51,7 @@
 
 ## describe the HTTP request/response cycle
 
-thanks vahid
+
 
 ## what are status codes?  different types?
 
@@ -60,7 +61,7 @@ thanks vahid
 
 | status | category | meaning |
 | - | - | - |
-| 1xx | informational | info |
+| 1xx | informational | sum info |
 | 2xx | success | "request successful"; resource transmitted; 2xx `=` big success! |
 | 3xx | redirection | requested resource has moved; indicate redirect status; automatically (?) follows the supplied url listed by the `Location` header |
 | 4xx | client error | "resource not found"; client-side error w/ request |
