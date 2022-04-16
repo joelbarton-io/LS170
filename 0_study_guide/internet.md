@@ -7,15 +7,14 @@
 
   - **A network exists when multiple devices are connected and able of exchanging data**
 
-  - 2 pieces:
-    - physical infrastructure
+  - 2 pieces to "the internet":
+    - physical infrastructure (wires, routers, switches, etc...)
     - protocols - sets of rules than enable inter-netowrk communication and govern it
 
-  - 2 devices connected via LAN is a network
+  - _2 devices connected over a LAN = a network_
     - WLAN wireless LAN
 
   - switches allow us to communicate with multiple devices on the same LAN
-  - switches replaced hubs
   - routers (among other devices) connect multiple LAN together
   - The word router is pretty overused/overloaded
 
@@ -42,44 +41,45 @@
 
 ## how do lower level protocols operate?
 
-- _network / internet layer_ Goal: end-to-end delivery
-  - internet protocol (IP)
-  - PDU - IP packet
+### _network / internet layer_
+  - Goal of internet protocol: end-to-end delivery
+  - PDU: IP _packet_
+
   - IP addresses - IPv4, IPv6
     - devices on a network are _dynamically configured_ (assigned) an IP address
     - IP addresses are hierarchical
     - assigned by something (_? don't need to know ?_)
-    - IP address ranges
+    - network addresses define a range of addresses within a particular subnet
     - first IP Address in the range is the network address
-    - hierarchical
-      - saves us from one single, massive lookup table
-      - ranges are managed separately
-      - lookup tables/routing tables can scale
-    - 4 numbers separated by periods, 0-255
 
-- _datalink / link_
+### _datalink / link layer_
+  - Goal: hop-to-hop delivery (router to router)
+
   - adds logical **STRUCTURE** to binary data (stream of bits)
   - ethernet protocol
     - devices in a LAN, not outside that LAN
     - physical point-to-point connect between hosts on a local network
+
   - **PDU** - ethernet frame ![pdu](./data_link_pdu.png)
 
   - **TO REMEMBER:**
     - _Source/Destination MAC addresses_ used to direct frames between networked devices
+       - burned in "flat" address
+      - logical (as opposed to dynamic/hierarchical for IP address)
+      - stored in a table in some piece of hardware
+      - tables get too large to be realistic for large networks
+
     - Data payload
     - a checksum for corruption
 
-  - MAC addresses
-    - burned in "physical" "flat" address
-    - logical (vs dynamic/hierarchical for IP)
-    - can change but doesn't usually
-    - stored in a table in some piece of hardware
-    - tables get too large to be realistic for large networks
 
-- _physical_
-  - bits and bytes 1, 0
+          -> (/) encapsulation <-
+
+
+### _physical layer_
+  - bits and bytes
   - electrical, light (fiber optic), radio waves (cell and wifi)
-  - stream of 1s and 0s (pdu?)
+  - stream of 1s and 0s
 
 
 ## what is an IP address?  what is a port number?
